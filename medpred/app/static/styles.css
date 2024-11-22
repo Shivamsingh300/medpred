@@ -1,0 +1,52 @@
+
+/* Custom CSS for Medical Cost Prediction Page */
+
+/* Navbar styling */
+nav {
+    background-color: #6a1b9a; /* Purple darken-4 */
+  }
+  
+  nav ul.right li a {
+    color: #ffffff; /* White text */
+  }
+  
+  nav ul.right li a:hover {
+    background-color: #4a148c; /* Purple darken-3 */
+  }
+  
+  /* Form container styling */
+  .container {
+    margin-top: 2rem;
+  }
+  
+  /* Form input fields styling */
+  input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #9e9e9e; /* Grey */
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #843434; /* Purple darken-4 */
+    color: #ffffff; /* White text */
+    padding: 0.5rem 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #4a148c; /* Purple darken-3 */
+  }
+  
+  /* Result section styling */
+  .dark-text {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  h4 {
+    color: #6a1b9a; /* Purple darken-4 */
+  }
+  

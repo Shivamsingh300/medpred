@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+
+  <title>Medical Cost Prediction</title>
+
+  <style>
+    body {
+      background-color: #f5f5dc; /* Light beige background color */
+      padding: 20px; /* Optional: Add padding for content */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center red-text">Medical Insurance Cost Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light black-text">Predict the cost for your Medical Insurance!</h5>
+      </div>
+      <form method="post">
+        {% csrf_token %}
+        <label for="age">Age:</label>
+        <input type="text" id="age" placeholder="Age" name="age" pattern="[0-9]*"><br><br>
+        <label for="sex">Sex:</label>
+        <input type="text" id="sex" placeholder="0 - Male/1 - Female" name="sex" pattern="[01]"><br><br>
+        <label for="bmi">BMI:</label>
+        <input type="text" id="bmi" placeholder="BMI" name="bmi" pattern="[0-9.]*"><br><br>
+        <label for="children">Children:</label>
+        <input type="text" id="children" placeholder="0 for None" name="children" pattern="[0-9]*"><br><br>
+        <label for="smoker">Smoker:</label>
+        <input type="text" id="smoker" placeholder="1 - Yes/0 - No" name="smoker" pattern="[01]"><br><br>
+        <label for="region">Region:</label>
+        <input type="text" id="region" placeholder="0-NW/1-NE/2-SE/3-SW" name="region" pattern="[0-3]"><br><br>
+        <input type="submit" value="Predict">
+      </form>
+
+      <div class="dark-text">
+        <br>
+        <h4>{{ pred }}</h4><br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
